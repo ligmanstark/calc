@@ -4,12 +4,12 @@ const Expression = (props) => {
 	const { count } = props;
 	const { Result, applyExpression = Function.prototype } = props;
 	return (
-		<Box display="flex" flexWrap="wrap" w="10%" justifyContent="center">
+		<Box display="flex" flexWrap="wrap" justifyContent="center">
 			<Button
 				padding="20px"
 				count={count}
 				expression={'+'}
-                onClick={applyExpression}
+				onClick={applyExpression}
 			>
 				+
 			</Button>
@@ -17,7 +17,7 @@ const Expression = (props) => {
 				padding="20px"
 				count={count}
 				expression={'-'}
-                onClick={applyExpression}
+				onClick={applyExpression}
 			>
 				-
 			</Button>
@@ -25,7 +25,7 @@ const Expression = (props) => {
 				padding="20px"
 				count={count}
 				expression={'*'}
-                onClick={applyExpression}
+				onClick={applyExpression}
 			>
 				*
 			</Button>
@@ -33,18 +33,13 @@ const Expression = (props) => {
 				padding="20px"
 				count={count}
 				expression={'/'}
-                onClick={applyExpression}
+				onClick={applyExpression}
 			>
 				/
-            </Button>
-            <Button
-				padding="20px"
-				count={count}
-				expression={'='}
-                onClick={Result}
-			>
+			</Button>
+			<Button padding="20px" count={count} expression={'='} onClick={Result}>
 				=
-            </Button>
+			</Button>
 		</Box>
 	);
 };

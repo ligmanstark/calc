@@ -10,13 +10,13 @@ function App() {
 
 	const Counter = (event) => {
 		const target = event.target;
+
 		if (count !== '0') {
 			setCount(count + target.innerHTML);
 		} else {
 			setCount(target.innerHTML);
 		}
 	};
-
 
 	const applyExpression = (countedExpression) => {
 		Counter(countedExpression);
@@ -38,7 +38,7 @@ function App() {
 
 	return (
 		<div className="App">
-			<Box minHeight="calc(100vh - 134px)" padding="1.5rem">
+			<Box minHeight="calc(100vh - 134px)" padding="1.5rem" maxWidth="180px">
 				<Box>
 					<Box
 						paddingLeft="12px"
